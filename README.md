@@ -1,0 +1,1 @@
+A full-stack web application with user sign-up/login, exercise tracking, and role-based access control, including an admin dashboard. Built with React (frontend), Node.js and Express (backend API), and MongoDB for data management. Implemented JWT authorization to ensure secure access.
