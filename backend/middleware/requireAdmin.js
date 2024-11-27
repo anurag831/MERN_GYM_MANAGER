@@ -16,10 +16,15 @@ const requireAdmin = async (req, res, next) => {
 
         const user = await User.findOne({_id})
 
-        // console.log("Middleware passed")
-
-        next()
+        if(user.role === 'admin') {
+            console.log(user.role)
+            console.log("Middleware passed")
+            next()
+        }
+        
+        
     } catch(error) {
+        console.log("Middleware not passed")
         res.status(401).json({error:"Request is not made by admin"})
     }
 

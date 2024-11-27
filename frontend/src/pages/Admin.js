@@ -21,9 +21,7 @@ const Admin = () => {
       }
     };
 
-    if (user.role === "admin") {
-      fetchUsers();
-    }
+    fetchUsers()
   }, [user]);
 
 

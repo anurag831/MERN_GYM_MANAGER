@@ -21,8 +21,8 @@ const userSchema = new Schema({
 });
 
 //(Making our own method associated with the model instead of using built-in methods)
-// When defining this function, we cannot use arrow function, instead we have to use regular fucntion defining because we are using the 'this' keyword in our function
-// static signup method
+// When defining this function, we cannot use arrow function, instead we have to use regular fucntion defining because we are using the 'this' 
+// keyword in our function static signup method
 userSchema.statics.signUp = async function (email, password) {
   if (!email || !password) {
     throw Error("All fields must be filled");

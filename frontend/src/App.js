@@ -39,11 +39,13 @@ function App() {
             />
             <Route
             path="/admin"
-            element={!user ? <Navigate to="/login" /> : (role === 'admin') ? <Admin/> : <Navigate to="/" />}
+            // element={!user ? <Navigate to="/login" /> : role === "admin" ? <Admin/> : <Navigate to="/" />}
+            element={!user ? <Navigate to="/login" /> : role === "admin" ? <Admin/> : <Navigate to="/" />}
             />
             <Route
             path="/userWorkouts/:id"
-            element={(role === 'admin') ? <UserWorkouts/> : <Navigate to="/" />}
+            // element={role === "admin" ? <UserWorkouts/> : <Navigate to="/" />}
+            element={!user ? <Navigate to="/login" /> : role === "admin" ? <UserWorkouts/> : <Navigate to="/" />}
             />
           </Routes>
         </div>
